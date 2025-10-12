@@ -1,0 +1,7 @@
+.header {
+  @apply w-full py-8 border-b border-info;
+
+  .container {
+    @apply border border-error;
+  }
+}

@@ -1,0 +1,7 @@
+a {
+  @apply text-inherit underline-offset-4 no-underline hover:underline focus:underline active:underline;
+}
+
+p {
+  @apply mb-6 last:mb-0 text-base md:text-xl leading-7 max-w-prose;
+}

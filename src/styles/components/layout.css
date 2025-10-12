@@ -1,0 +1,44 @@
+html,
+body {
+  @apply h-full min-h-fit max-w-full overflow-x-hidden;
+}
+
+body {
+  @apply text-dark bg-light flex flex-col;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  @apply text-light bg-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.main {
+  @apply flex-grow py-8 grid gap-8 lg:grid-cols-12 border border-warning;
+}
+
+.article {
+  @apply min-h-full border border-primary lg:col-span-9;
+}
+
+.sidebar {
+  @apply border border-danger lg:col-span-3 lg:order-first;
+}
+
+.content-wrap {
+  @apply grid grid-cols-1 lg:grid-cols-12 gap-8;
+}
+
+.content {
+  @apply col-span-1 lg:col-span-8;
+}
+
+.content-aside {
+  @apply border border-accent col-span-1 lg:col-span-4;
+}
