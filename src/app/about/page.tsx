@@ -30,10 +30,10 @@ export default function About() {
           <Section title='Purpose'>
             <p>
               The goal of this template is to save you time and effort by
-              providing a pre-configured, production-ready setup. Whether you're
-              building a personal project, a portfolio, or a professional
-              application, this template offers a clean structure, modern
-              tooling, and flexibility to suit your needs.
+              providing a pre-configured, production-ready setup. Whether
+              you&apos;re building a personal project, a portfolio, or a
+              professional application, this template offers a clean structure,
+              modern tooling, and flexibility to suit your needs.
             </p>
           </Section>
           <Section title='Features'>
@@ -63,8 +63,8 @@ export default function About() {
                 GitHub
               </a>{' '}
               and follow the setup instructions in the README to get started.
-              Customize the template to fit your project's requirements, add
-              your own components, and deploy with ease.
+              Customize the template to fit your project&apos;s requirements,
+              add your own components, and deploy with ease.
             </p>
           </Section>
           <Section title='Contribute'>
