@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  @apply text-dark bg-light flex flex-col overflow-x-visible;
+  @apply text-dark bg-light flex flex-col !overflow-x-visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
