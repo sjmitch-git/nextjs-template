@@ -1,10 +1,10 @@
 html,
 body {
-  @apply h-full min-h-fit max-w-full overflow-x-hidden;
+  @apply h-full min-h-fit max-w-full;
 }
 
 body {
-  @apply text-dark bg-light flex flex-col;
+  @apply text-dark bg-light flex flex-col overflow-x-visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,5 +40,9 @@ body.dark {
 }
 
 .content-aside {
-  @apply border border-accent col-span-1 lg:col-span-4;
+  @apply col-span-1 lg:col-span-4 order-first lg:order-last;
+}
+
+.section {
+  @apply mb-8;
 }

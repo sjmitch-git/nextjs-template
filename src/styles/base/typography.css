@@ -1,5 +1,13 @@
 a {
   @apply text-inherit underline-offset-4 no-underline hover:underline focus:underline active:underline;
+
+  &[target="_blank"] {
+    @apply after:content-['_↗'] after:-ml-1 after:text-sm after:align-super;
+  }
+
+  .article & {
+    @apply text-primary-dark dark:text-primary-light;
+  }
 }
 
 p {

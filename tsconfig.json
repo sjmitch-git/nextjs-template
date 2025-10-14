@@ -20,6 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@types": ["./src/types/index"],
       "@components/*": ["./src/components/*"],
       "@features": ["./src/components/features/index"],
       "@layout": ["./src/components/layout/index"],
