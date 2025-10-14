@@ -1,8 +1,7 @@
 import { AppConfig } from '@lib/config';
 import { Hero, Section, Aside } from '@layout';
-// import { TableOfContents } from "@features";
 
-const title = 'About Us';
+const title = 'About';
 const description = AppConfig.description;
 
 export const metadata = {
