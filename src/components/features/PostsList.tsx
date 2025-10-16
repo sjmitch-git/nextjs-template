@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import { useDataContext } from '@lib/contexts/DataContext'
 import { Post } from '@types'
 import { Pagination } from '@ui'
@@ -12,6 +13,9 @@ interface PostsListProps {
 
 export default function PostsList({ initialPosts }: PostsListProps) {
   const { posts, setPosts } = useDataContext()
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage] = useState(12)
 
@@ -21,6 +25,19 @@ export default function PostsList({ initialPosts }: PostsListProps) {
     }
   }, [initialPosts, posts, setPosts])
 
+  useEffect(() => {
+    const queryPage = parseInt(searchParams.get('p') || '1', 10)
+    /* const queryFilter = searchParams.get('filter') || ''
+    const querySortBy = searchParams.get('sortBy') || 'rank-desc' */
+
+    if (!isNaN(queryPage) && queryPage > 0) {
+      setCurrentPage(queryPage)
+    }
+
+    /* setFilterText(queryFilter)
+    setSortBy(querySortBy) */
+  }, [searchParams])
+
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
@@ -29,6 +46,11 @@ export default function PostsList({ initialPosts }: PostsListProps) {
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber)
+      const query = new URLSearchParams({
+        ...Object.fromEntries(searchParams.entries()),
+        p: pageNumber.toString(),
+      }).toString()
+      router.push(`${pathname}?${query}`)
     }
   }
 
