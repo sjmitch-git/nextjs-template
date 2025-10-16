@@ -1,15 +1,15 @@
-import { AppConfig } from '@lib/config';
-import { Hero, Section, Aside } from '@layout';
+import { AppConfig } from '@lib/config'
+import { Hero, Section, Aside } from '@layout'
 
-const title = 'About';
-const description = AppConfig.description;
+const title = 'About'
+const description = AppConfig.description
 
 export const metadata = {
   title: title,
   description: description,
-};
+}
 
-export default function About() {
+export default function AboutPage() {
   return (
     <>
       <Hero
@@ -85,5 +85,5 @@ export default function About() {
         <Aside />
       </div>
     </>
-  );
+  )
 }

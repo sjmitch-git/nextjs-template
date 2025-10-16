@@ -6,9 +6,6 @@ export {
   Input,
   Select,
   Tabs,
-  TwitterEmbed,
-  LineChart,
-  PieChart,
   Autocomplete,
   Dialog,
   Button,
@@ -30,4 +27,5 @@ export {
   Fieldset,
   TextInput,
   TextArea,
-} from "@smitch/fluid";
+  Breadcrumbs,
+} from '@smitch/fluid'

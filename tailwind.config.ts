@@ -1,79 +1,79 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
-  darkMode: "selector",
+  darkMode: 'selector',
   content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@smitch/fluid/**/*.{js,ts,jsx,tsx}",
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@smitch/fluid/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
-        xl: "0rem",
+        DEFAULT: '1rem',
+        xl: '0rem',
       },
     },
     extend: {
       colors: {
         light: {
-          DEFAULT: "var(--light)",
+          DEFAULT: 'var(--light)',
         },
         dark: {
-          DEFAULT: "var(--dark)",
+          DEFAULT: 'var(--dark)',
         },
         primary: {
-          DEFAULT: "var(--primary)",
-          light: "var(--primary-light)",
-          dark: "var(--primary-dark)",
+          DEFAULT: 'var(--primary)',
+          light: 'var(--primary-light)',
+          dark: 'var(--primary-dark)',
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
-          light: "var(--secondary-light)",
-          dark: "var(--secondary-dark)",
+          DEFAULT: 'var(--secondary)',
+          light: 'var(--secondary-light)',
+          dark: 'var(--secondary-dark)',
         },
         accent: {
-          DEFAULT: "var(--accent)",
-          light: "var(--accent-light)",
-          dark: "var(--accent-dark)",
+          DEFAULT: 'var(--accent)',
+          light: 'var(--accent-light)',
+          dark: 'var(--accent-dark)',
         },
         neutral: {
-          DEFAULT: "var(--neutral)",
-          light: "var(--neutral-light)",
-          dark: "var(--neutral-dark)",
+          DEFAULT: 'var(--neutral)',
+          light: 'var(--neutral-light)',
+          dark: 'var(--neutral-dark)',
         },
         info: {
-          DEFAULT: "var(--info)",
-          light: "var(--info-light)",
-          dark: "var(--info-dark)",
+          DEFAULT: 'var(--info)',
+          light: 'var(--info-light)',
+          dark: 'var(--info-dark)',
         },
         success: {
-          DEFAULT: "var(--success)",
-          light: "var(--success-light)",
-          dark: "var(--success-dark)",
+          DEFAULT: 'var(--success)',
+          light: 'var(--success-light)',
+          dark: 'var(--success-dark)',
         },
         warning: {
-          DEFAULT: "var(--warning)",
-          light: "var(--warning-light)",
-          dark: "var(--warning-dark)",
+          DEFAULT: 'var(--warning)',
+          light: 'var(--warning-light)',
+          dark: 'var(--warning-dark)',
         },
         error: {
-          DEFAULT: "var(--error)",
-          light: "var(--error-light)",
-          dark: "var(--error-dark)",
+          DEFAULT: 'var(--error)',
+          light: 'var(--error-light)',
+          dark: 'var(--error-dark)',
         },
         danger: {
-          DEFAULT: "var(--danger)",
-          light: "var(--danger-light)",
-          dark: "var(--danger-dark)",
+          DEFAULT: 'var(--danger)',
+          light: 'var(--danger-light)',
+          dark: 'var(--danger-dark)',
         },
       },
     },
   },
   plugins: [
-    require("@tailwindcss/forms")({
-      strategy: "class",
+    require('@tailwindcss/forms')({
+      strategy: 'class',
     }),
   ],
 } satisfies Config;

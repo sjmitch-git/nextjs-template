@@ -1,24 +1,24 @@
-"use client";
+'use client'
 
-import { useTheme } from "@lib/contexts/ThemeContext";
-import { Switch } from "@smitch/fluid";
+import { useTheme } from '@lib/contexts/ThemeContext'
+import { Switch } from '@ui'
 
 const ToggleTheme = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <Switch
-      switchOffColor="warning"
-      switchOffContent="☼"
-      switchOnColor="warning"
-      switchOnContent="☾"
-      shape="circle"
-      checked={theme === "dark"}
-      defaultChecked={theme === "dark"}
+      switchOffColor='warning'
+      switchOffContent='☼'
+      switchOnColor='warning'
+      switchOnContent='☾'
+      shape='circle'
+      checked={theme === 'dark'}
+      defaultChecked={theme === 'dark'}
       onChange={toggleTheme}
-      className="text-dark dark:text-light"
+      className='text-dark dark:text-light'
     />
-  );
-};
+  )
+}
 
-export default ToggleTheme;
+export default ToggleTheme
