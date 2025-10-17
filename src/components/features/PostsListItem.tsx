@@ -16,13 +16,16 @@ const PostListItem = ({ title, id, userId }: Post) => {
           title={title}
           className='line-clamp-2'
         />
-        <p className='text-right text-neutral text-sm mt-auto px-2'>
-          User {userId}
-        </p>
-        <CardFooter
-          link={`./posts/${id}`}
-          linkLabel='View Post'
-        />
+        <div>
+          <p className='text-right text-neutral text-sm px-2 my-2'>
+            User {userId}
+          </p>
+          <CardFooter
+            link={`./posts/${id}`}
+            linkLabel='View Post'
+            className='pt-0'
+          />
+        </div>
       </CardBody>
     </Card>
   )

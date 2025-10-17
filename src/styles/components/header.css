@@ -1,7 +1,7 @@
 .header {
-  @apply w-full py-8 border-b border-info;
+  @apply w-full sticky top-0 z-50 bg-inherit;
 
-  .container {
-    @apply border border-error;
+  & .navbrand {
+    @apply dark:invert opacity-80;
   }
 }

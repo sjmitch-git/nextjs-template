@@ -16,7 +16,6 @@ export default async function PostsPage() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`)
 
     if (!response.ok) {
-      console.log('Response not ok:', response.statusText)
       throw new Error('Failed to fetch posts')
     }
 

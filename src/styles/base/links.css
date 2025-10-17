@@ -1,7 +1,11 @@
 a {
   @apply text-inherit underline-offset-4 no-underline hover:underline focus:underline active:underline;
 
-  &[target='_blank'] {
+  &.btnLink {
+    @apply flex items-center justify-center gap-2 text-lg font-medium hover:no-underline hover:opacity-85 bg-secondary-light dark:bg-secondary-dark px-4 py-2 rounded-md;
+  }
+
+  &[target='_blank']:not(.btnLink) {
     @apply after:content-['_↗'] after:-ml-1 after:text-sm after:align-super;
   }
 

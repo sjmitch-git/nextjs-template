@@ -15,7 +15,8 @@ export const AppConfig = {
     name: 'OBLONG',
     url: 'https://oblong.digital/',
   },
-  organization: 'Oblong Digital'
+  organization: 'Oblong Digital',
+  githubRepo: 'https://github.com/sjmitch-git/nextjs-template',
 }
 
 export const MetaData: Metadata = {

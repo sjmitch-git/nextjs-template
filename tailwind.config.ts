@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 export default {
   darkMode: 'selector',
@@ -11,7 +11,8 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
+        DEFAULT: '0.5rem',
+        md: '1rem',
         xl: '0rem',
       },
     },
@@ -76,4 +77,4 @@ export default {
       strategy: 'class',
     }),
   ],
-} satisfies Config;
+} satisfies Config

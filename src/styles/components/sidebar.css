@@ -1,0 +1,7 @@
+.sidebar {
+  @apply lg:col-span-3 lg:order-first;
+
+  & .sidebar-inner {
+    @apply p-0 lg:sticky lg:top-24 text-center space-y-8;
+  }
+}

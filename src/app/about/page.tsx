@@ -1,5 +1,6 @@
 import { AppConfig } from '@lib/config'
 import { Hero, Section, Aside } from '@layout'
+import { Breadcrumbs } from '@ui'
 
 const title = 'About'
 const description = AppConfig.description
@@ -12,6 +13,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <Breadcrumbs />
       <Hero
         title={title}
         description={description}
