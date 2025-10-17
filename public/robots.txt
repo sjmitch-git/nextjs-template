@@ -1,0 +1,11 @@
+# Allow all crawlers by default
+User-agent: *
+Allow: /
+Disallow: /user/  # User private data
+
+# Block Amazonbot
+User-agent: Amazonbot
+Disallow: /  # Blocks Amazonbot from entire site
+
+# Sitemap for all allowed crawlers
+Sitemap: https://nextjs-fluid.vercel.app/sitemap.xml  # Points to sitemap
