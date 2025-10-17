@@ -5,7 +5,7 @@ a {
     @apply flex items-center justify-center gap-2 text-lg font-medium hover:no-underline hover:opacity-85 bg-secondary-light dark:bg-secondary-dark px-4 py-2 rounded-md;
   }
 
-  &[target='_blank']:not(.btnLink) {
+  &[target='_blank']:not(.btnLink):not(.nocontent) {
     @apply after:content-['_↗'] after:-ml-1 after:text-sm after:align-super;
   }
 
