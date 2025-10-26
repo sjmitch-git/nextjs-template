@@ -39,15 +39,13 @@ export default function AboutPage() {
             </p>
           </Section>
           <Section title='Features'>
-            <ul className='list-disc list-inside'>
+            <ul className='list-disc list-outside pl-4 ml-4 text-base md:text-xl space-y-2'>
               <li>
                 Next.js with App Router for optimized routing and performance
               </li>
               <li>TypeScript for type-safe development</li>
-              <li>
-                Pre-configured CSS support (e.g., CSS Modules, Tailwind, or your
-                preferred styling)
-              </li>
+              <li>Pre-configured TailwindCSS support</li>
+              <li>Includes Fluid UI component libray</li>
               <li>SEO-friendly setup with metadata and best practices</li>
               <li>
                 Easy-to-extend structure for adding components, pages, and APIs
@@ -67,20 +65,6 @@ export default function AboutPage() {
               and follow the setup instructions in the README to get started.
               Customize the template to fit your project&apos;s requirements,
               add your own components, and deploy with ease.
-            </p>
-          </Section>
-          <Section title='Contribute'>
-            <p>
-              This is an open-source project, and contributions are welcome!
-              Check out the{' '}
-              <a
-                href='https://github.com/your-username/your-repo/blob/main/CONTRIBUTING.md'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                contribution guidelines
-              </a>{' '}
-              to report issues, suggest features, or submit pull requests.
             </p>
           </Section>
         </div>
