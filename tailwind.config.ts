@@ -5,7 +5,7 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@smitch/fluid/lib/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@smitch/breeze/lib/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     container: {

@@ -1,31 +1,10 @@
-@import "./variables.css";
+@import './variables.css';
 
-@import "tailwindcss/base";
-@import "./base/_index.css";
+@import 'tailwindcss/base';
+@import './base/_index.css';
 
-@import "tailwindcss/components";
-@import "./components/_index.css";
+@import 'tailwindcss/components';
+@import './components/_index.css';
 
-@import "tailwindcss/utilities";
-@import "./utilities/_index.css";
-
-html,
-body {
-  @apply h-full min-h-fit max-w-full overflow-x-hidden;
-}
-
-body {
-  @apply text-dark bg-light flex flex-col;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body.dark {
-  @apply text-light bg-dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+@import 'tailwindcss/utilities';
+@import './utilities/_index.css';

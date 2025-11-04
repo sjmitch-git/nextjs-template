@@ -4,13 +4,13 @@ body {
 }
 
 body {
-  @apply text-dark bg-light flex flex-col !overflow-x-visible;
+  @apply text-dark bg-slate-100 flex flex-col !overflow-x-visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body.dark {
-  @apply text-light bg-dark;
+  @apply text-light bg-slate-800;
 }
 
 @media (prefers-color-scheme: dark) {

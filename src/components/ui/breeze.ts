@@ -11,4 +11,4 @@ export {
   Switch,
   SocialShare,
   Breadcrumbs,
-} from '@smitch/fluid'
+} from '@smitch/breeze'

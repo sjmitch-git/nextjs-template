@@ -36,7 +36,7 @@ export default function Home() {
               </li>
               <li>TypeScript for type-safe development</li>
               <li>Pre-configured TailwindCSS support</li>
-              <li>Includes Fluid UI component libray</li>
+              <li>Includes Breeze UI component libray</li>
               <li>SEO-friendly setup with metadata and best practices</li>
               <li>
                 Easy-to-extend structure for adding components, pages, and APIs

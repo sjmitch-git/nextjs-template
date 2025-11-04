@@ -12,7 +12,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@smitch/fluid": "^3.0.51",
+    "@smitch/breeze": "^0.2.3",
     "autoprefixer": "^10.4.20",
     "next": "15.5.4",
     "postcss": "^8.4.47",

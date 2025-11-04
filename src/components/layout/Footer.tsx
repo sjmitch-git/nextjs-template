@@ -33,16 +33,16 @@ const Footer = () => {
         <p className='text-sm mx-auto flex items-center justify-center gap-4'>
           Built with{' '}
           <a
-            href='https://nextjs.org/'
+            href='https://breezeui.site/'
             target='_blank'
             rel='noopener noreferrer'
             className='text-primary-dark dark:text-primary-light nocontent'
-            title='Visit Fluid UI website'
-            aria-label='Visit Fluid UI website'
+            title='Visit Breeze demo website'
+            aria-label='Visit Breeze demo website'
           >
             <img
-              src='/fluid.png'
-              alt='Fluid UI Logo'
+              src='/breeze.png'
+              alt='Breeze UI Logo'
               width={134}
               height={43}
             />

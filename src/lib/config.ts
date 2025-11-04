@@ -9,8 +9,8 @@ export const AppConfig = {
   sitename: 'Next.js Template',
   title: 'Next.js Template',
   description:
-    'A starter template for Next.js projects with Tailwind CSS and Fluid UI.',
-  keywords: 'nextjs, reactjs, tailwindcss, fluidui, template, starter',
+    'A starter template for Next.js projects with Tailwind CSS and Breeze UI.',
+  keywords: 'nextjs, reactjs, tailwindcss, breezeui, template, starter',
   author: {
     name: 'OBLONG',
     url: 'https://oblong.digital/',
