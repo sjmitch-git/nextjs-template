@@ -11,6 +11,7 @@ const config: Config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'mjs', 'cjs'],
+  clearMocks: true,
   transform: {
     '^.+\\.(ts|tsx|js|jsx|mjs|cjs)$': [
       'babel-jest',
@@ -29,12 +30,4 @@ const config: Config = {
   },
 }
 
-async function extendedConfig() {
-  const nextJestConfig = await createJestConfig(config)()
-  nextJestConfig.transformIgnorePatterns =
-    nextJestConfig.transformIgnorePatterns || []
-  nextJestConfig.transformIgnorePatterns[0] = '/node_modules/(?!@smitch/fluid/)'
-  return nextJestConfig
-}
-
-export default extendedConfig
+export default createJestConfig(config)

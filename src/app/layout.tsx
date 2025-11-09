@@ -22,11 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang='en'
-      data-theme='dark'
-    >
-      <body className={`${geistSans.variable} ${geistMono.variable} dark`}>
+    <html lang='en'>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GlobalProvider>
           <Layout>{children}</Layout>
         </GlobalProvider>

@@ -1,5 +1,5 @@
 .header {
-  @apply w-full sticky top-0 z-50 bg-inherit;
+  @apply w-full sticky top-0 z-50 bg-inherit shadow-lg dark:shadow-black;
 
   & .navbrand {
     @apply dark:invert opacity-80;

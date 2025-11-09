@@ -19,7 +19,7 @@ const Footer = () => {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className='text-dark dark:text-light'
+                    className='text-dark dark:text-light text-base'
                     title={link.title || link.name}
                     prefetch={false}
                   >
@@ -62,7 +62,6 @@ const Footer = () => {
           ) : (
             AppConfig.author.name
           )}
-          . All rights reserved.
         </p>
       </div>
     </footer>
