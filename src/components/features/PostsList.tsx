@@ -43,8 +43,10 @@ export default function PostsList({ initialPosts }: PostsListProps) {
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
   const totalPages = Math.ceil(posts.length / postsPerPage)
 
-  const handlePageChange = (pageNumber: number) => {
-    if (pageNumber >= 1 && pageNumber <= totalPages) {
+  const handlePageChange = (page: string) => {
+    const pageNumber = parseInt(page, 10)
+
+    if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber)
       const query = new URLSearchParams({
         ...Object.fromEntries(searchParams.entries()),
