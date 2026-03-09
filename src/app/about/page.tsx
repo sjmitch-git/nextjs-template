@@ -13,7 +13,10 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Breadcrumbs />
+      <Breadcrumbs
+        size='lg'
+        prefetch={false}
+      />
       <Hero
         title={title}
         description={description}

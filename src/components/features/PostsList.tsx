@@ -16,7 +16,7 @@ export default function PostsList({ initialPosts }: PostsListProps) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState('1')
   const [postsPerPage] = useState(12)
 
   useEffect(() => {
@@ -26,19 +26,16 @@ export default function PostsList({ initialPosts }: PostsListProps) {
   }, [initialPosts, posts, setPosts])
 
   useEffect(() => {
-    const queryPage = parseInt(searchParams.get('p') || '1', 10)
-    /* const queryFilter = searchParams.get('filter') || ''
-    const querySortBy = searchParams.get('sortBy') || 'rank-desc' */
+    const queryPage = searchParams.get('p') || '1'
 
-    if (!isNaN(queryPage) && queryPage > 0) {
+    if (Number(queryPage) > 0) {
       setCurrentPage(queryPage)
+    } else {
+      setCurrentPage('1')
     }
-
-    /* setFilterText(queryFilter)
-    setSortBy(querySortBy) */
   }, [searchParams])
 
-  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfLastPost = Number(currentPage) * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
   const totalPages = Math.ceil(posts.length / postsPerPage)
@@ -47,7 +44,7 @@ export default function PostsList({ initialPosts }: PostsListProps) {
     const pageNumber = parseInt(page, 10)
 
     if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
-      setCurrentPage(pageNumber)
+      setCurrentPage(page)
       const query = new URLSearchParams({
         ...Object.fromEntries(searchParams.entries()),
         p: pageNumber.toString(),
@@ -74,13 +71,13 @@ export default function PostsList({ initialPosts }: PostsListProps) {
         <div className='pagination-wrapper'>
           {currentPosts.length !== 0 && (
             <Pagination
-              page={currentPage.toString()}
+              page={currentPage}
               results={posts.length}
               range={postsPerPage}
               onChange={handlePageChange}
               btnShape='circle'
               gap='md'
-              size='md'
+              size='lg'
             />
           )}
         </div>

@@ -9,6 +9,7 @@ const Header = () => {
         <NavBar
           brand={AppConfig.title}
           brandSrc={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`}
+          brandAspectRatio='194/43'
           links={DefaultLinks}
           navStyles='py-2 md:py-4 px-0 z-20 font-semibold test relative'
           btnColor='light'

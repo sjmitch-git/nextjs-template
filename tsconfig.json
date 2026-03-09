@@ -27,6 +27,7 @@
       "@layout": ["./src/components/layout/index"],
       "@ui": ["./src/components/ui/index"],
       "@lib/*": ["./src/lib/*"],
+      "@utils": ["./src/lib/utils/index"],
       "@styles/*": ["./src/styles/*"]
     }
   },

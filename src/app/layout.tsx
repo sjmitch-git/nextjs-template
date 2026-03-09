@@ -1,8 +1,10 @@
 import { MetaData } from '@/lib/config'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import '@styles/index.css'
 import { GlobalProvider } from '@lib/contexts/GlobalContext'
 import { Layout } from '@layout'
+import { themeInitScript } from '@utils'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,7 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        suppressHydrationWarning
+      >
+        <Script
+          id='theme-init'
+          strategy='beforeInteractive'
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         <GlobalProvider>
           <Layout>{children}</Layout>
         </GlobalProvider>

@@ -87,7 +87,11 @@ export default async function PostDetailPage({ params }: ParamsProps) {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Breadcrumbs activeLabel='Post' />
+        <Breadcrumbs
+          size='lg'
+          prefetch={false}
+          activeLabel='Post'
+        />
         <Hero
           title={title}
           description={description}

@@ -1,25 +1,32 @@
 'use client'
 
-import {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useMemo,
-  ReactNode,
-} from 'react'
-import { Theme, ThemeContextType } from '@types'
+import { createContext, useContext, useState, useEffect, useMemo } from 'react'
+import { getSavedTheme, saveTheme } from '@utils'
+
+type Theme = 'light' | 'dark'
+type ThemeContextType = {
+  theme: Theme
+  toggleTheme: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(null)
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const [theme, setTheme] = useState<Theme>('light')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    const validTheme =
-      stored === 'light' || stored === 'dark' ? stored : 'light'
-    setTheme(validTheme)
+    ;(async () => {
+      const saved = await getSavedTheme()
+      const validTheme =
+        saved ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light')
+      setTheme(validTheme)
+      document.body.classList.toggle('dark', validTheme === 'dark')
+      setMounted(true)
+    })()
   }, [])
 
   const toggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,13 +35,16 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }
 
   useEffect(() => {
-    if (!theme) return
-    localStorage.setItem('theme', theme)
-    document.documentElement.setAttribute('data-theme', theme)
-    document.body.classList.toggle('dark', theme === 'dark')
-  }, [theme])
+    if (!mounted) return
+    ;(async () => {
+      await saveTheme(theme)
+      document.body.classList.toggle('dark', theme === 'dark')
+    })()
+  }, [theme, mounted])
 
   const value = useMemo(() => ({ theme, toggleTheme }), [theme])
+
+  if (!mounted) return null
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }

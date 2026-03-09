@@ -8,7 +8,7 @@ const LinkGithub = () => {
         href={AppConfig.githubRepo}
         target='_blank'
         rel='noopener noreferrer'
-        className='btnLink mx-auto'
+        className='btnLink mx-auto text-light'
         title='Visit our GitHub repository'
         aria-label='Visit our GitHub repository'
       >

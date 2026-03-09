@@ -2,6 +2,7 @@ import type { Post } from '@types'
 import { Hero } from '@layout'
 import { PostsList } from '@features'
 import { Alert, Breadcrumbs } from '@ui'
+import { Fascinate_Inline } from 'next/font/google'
 
 const title = 'Posts'
 const description = 'List of posts fetched from the jsonplaceholder API'
@@ -23,7 +24,7 @@ export default async function PostsPage() {
 
     return (
       <>
-        <Breadcrumbs />
+        <Breadcrumbs size='lg' prefetch={false} />
         <Hero
           title={title}
           description={description}

@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import { DefaultLinks, AppConfig } from '@/lib/config'
+import { ToggleThemeWrap } from '@features'
+import { LinkGithub } from '@features'
+import { SocialShare } from '@ui'
 
 function getYear() {
   return new Date().getFullYear()
@@ -9,6 +12,16 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='container'>
+        <ToggleThemeWrap />
+        <SocialShare
+          text='Check out this awesome site!'
+          buttons={['X', 'Facebook', 'LinkedIn', 'Email']}
+          btnShape='rounded'
+          gap='md'
+          size='lg'
+          layout='horizontal'
+          className='justify-around flex-row flex-wrap mx-auto'
+        />
         <nav aria-label='Footer navigation'>
           <ul className='flex flex-wrap gap-4 justify-center'>
             {DefaultLinks.map(
@@ -30,6 +43,7 @@ const Footer = () => {
             )}
           </ul>
         </nav>
+        <LinkGithub />
         <p className='text-sm mx-auto flex items-center justify-center gap-4'>
           Built with{' '}
           <a

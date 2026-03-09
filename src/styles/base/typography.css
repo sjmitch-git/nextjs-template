@@ -1,9 +1,9 @@
 .h1,
 .h2,
 .h3 {
-  @apply !opacity-80;
+  @apply !opacity-80 max-w-prose;
 }
 
 p {
-  @apply mb-6 last:mb-0 text-base md:text-xl leading-7 max-w-prose;
+  @apply mb-6 last:mb-0 text-base lg:text-lg md:text-xl leading-7 max-w-prose;
 }
